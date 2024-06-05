@@ -5,8 +5,8 @@ FROM maven:3.8.5-openjdk-17-slim AS build
 WORKDIR /app
 
 # Copie o arquivo pom.xml e o código-fonte
-COPY pom.xml .
-COPY src ./src
+COPY demo/pom.xml .
+COPY demo/src ./src
 
 # Baixe as dependências e compile o aplicativo
 RUN mvn clean package -DskipTests
